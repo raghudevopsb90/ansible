@@ -2,3 +2,6 @@
   tasks:
     - ping:
 
+- name: First Playbook with name key
+  tasks:
+    - ping:
