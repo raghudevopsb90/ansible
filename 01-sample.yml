@@ -3,5 +3,6 @@
     - ping:
 
 - name: First Playbook with name key
+  hosts: all
   tasks:
     - ping:
