@@ -1,8 +1,11 @@
 - name: import task
   ansible.builtin.import_tasks: test.yml
 
+- name: set var
+  set_fact:
+    task_name: test
+
 - name: include task
   ansible.builtin.import_tasks: "{{ task_name }}.yml"
-  vars:
-    task_name: test
+
 
