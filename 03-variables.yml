@@ -17,5 +17,11 @@
       debug:
         msg: Play Var - {{ url_play }} - Play file var - {{ url_file }}
 
+- name: Role variables
+  hosts: all
+  roles:
+    - demo
+
+
 
 
