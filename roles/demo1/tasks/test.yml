@@ -1,0 +1,9 @@
+- name: Print test
+  debug:
+    msg: Hello Test
+
+- name: Print World
+  debug:
+    msg: Hello World
+
+
