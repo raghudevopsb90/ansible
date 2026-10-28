@@ -1,0 +1,15 @@
+- name: Roles
+  hosts: all
+  vars:
+    url: google.com
+  tasks:
+    - name: Copy file
+      ansible.builtin.copy:
+        src: url.txt
+        dest: /tmp/furl.txt
+
+    - name: Copy Template
+      ansible.builtin.template:
+        src: url.txt
+        dest: /tmp/turl.txt
+
