@@ -15,7 +15,7 @@
 
     - name: template nginx
       ansible.builtin.template:
-        src: nginx
+        src: nginx.conf
         dest: /tmp/nginx.conf
       vars:
         app_names:
