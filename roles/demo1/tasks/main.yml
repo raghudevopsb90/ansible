@@ -6,6 +6,6 @@
     task_name: test
 
 - name: include task
-  ansible.builtin.import_tasks: "{{ task_name }}.yml"
+  ansible.builtin.include_tasks: "{{ task_name }}.yml"
 
 
