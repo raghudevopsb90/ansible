@@ -10,10 +10,12 @@
   hosts: all
   vars:
     url_play: play.example.com
+  vars_files:
+    - exvars.yml
   tasks:
     - name: Print Variable
       debug:
-        msg: Play Var - {{ url_play }}
+        msg: Play Var - {{ url_play }} - Play file var - {{ url_file }}
 
 
 
