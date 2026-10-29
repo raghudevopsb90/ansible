@@ -1,0 +1,26 @@
+- name: Roles
+  hosts: localhost
+  connection: local
+  vars:
+    url: google.com
+  tasks:
+    - name: template nginx
+      ansible.builtin.template:
+        src: nginx.conf
+        dest: /tmp/nginx.conf
+      vars:
+        app_names:
+          - orders
+          - ratings
+          - payment
+          - shipping
+          - cart
+          - user
+          - catalogue
+
+  handlers:
+    - name: Restart Nginx
+      ansible.builtin.debug:
+        msg: Restarting Nginx
+
+
