@@ -19,21 +19,8 @@
           - catalogue
       notify: Restart Nginx
 
-    - name: template nginx1
-      ansible.builtin.template:
-        src: url.txt
-        dest: /tmp/nginx1.conf
-      vars:
-        app_names:
-          - orders
-          - ratings
-          - payment
-          - shipping
-          - cart
-          - user
-          - catalogue
-      notify: Restart Nginx
-      notify_handler: true
+    - name: Run handlers immediately
+      ansible.builtin.meta: flush_handlers
 
     - name: Some task1
       ansible.builtin.debug:
