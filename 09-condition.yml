@@ -13,4 +13,7 @@
         msg: Install nginx
       when: ansible_facts['os_family'] == "Debian"
 
-
+    - name: Print
+      when: 'hat' in ansible_facts['distribution']
+      debug:
+        msg: "RedHat"
