@@ -21,7 +21,7 @@
 
     - name: template nginx1
       ansible.builtin.template:
-        src: nginx.conf
+        src: url.txt
         dest: /tmp/nginx1.conf
       vars:
         app_names:
