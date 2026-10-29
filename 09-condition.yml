@@ -13,6 +13,10 @@
         msg: Install nginx
       when: ansible_facts['os_family'] == "Debian"
 
+    - name: Print distribution
+      debug:
+        msg: "{{ ansible_facts['distribution'] }}"
+
     - name: Print
       when: "'hat' in ansible_facts['distribution']"
       debug:
