@@ -18,6 +18,6 @@
         msg: "{{ ansible_facts['distribution'] }}"
 
     - name: Print
-      when: "'hat' in ansible_facts['distribution']"
+      when: "'Hat' in ansible_facts['distribution']"
       debug:
         msg: "RedHat"
