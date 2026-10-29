@@ -17,6 +17,7 @@
           - cart
           - user
           - catalogue
+      notify: Restart Nginx
 
   handlers:
     - name: Restart Nginx
