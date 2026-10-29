@@ -1,0 +1,12 @@
+- name: Register variables
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Run command
+      ansible.builtin.shell: df -h
+      register: out
+
+    - name: Print out
+      ansible.builtin.debug:
+        msg: "{{ out }}"
+
